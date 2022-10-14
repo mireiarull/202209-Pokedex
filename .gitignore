@@ -1,3 +1,5 @@
 node_modules
 js/
 .DS_Store
+pokemon-log.json
+README.md
