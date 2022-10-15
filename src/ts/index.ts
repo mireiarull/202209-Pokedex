@@ -1,9 +1,12 @@
-import fetchPokemon from "./fetchPokemon.js";
-import fetchPokemonList from "./fetchPokemonList.js";
+import PokemonCard from "./components/PokemonCard/PokemonCard.js";
+import fetchPokemon from "./utils/fetchPokemon.js";
+import fetchPokemonList from "./utils/fetchPokemonList.js";
 
 const newPokemon = await fetchPokemon("https://pokeapi.co/api/v2/pokemon/1/");
-console.log(newPokemon);
 
 const pokemonList = await fetchPokemonList(0);
 
-console.log(pokemonList);
+const root = document.querySelector(".root");
+
+const pokemonCard = new PokemonCard(root as HTMLElement, newPokemon);
+pokemonCard.render();
