@@ -1,9 +1,12 @@
 import PokemonList from "./PokemonList";
 
-describe("Given a list of Pokemons", () => {
+let screen: HTMLElement;
+beforeEach(() => {
+  screen = document.createElement("div");
+});
+describe("Given a Pokemon list component", () => {
   describe("When it's rendered", () => {
     test("Then it should show two buttons with classes next-page and last-page and the page counter", () => {
-      const screen = document.createElement("div");
       const pokemonList = new PokemonList(screen, 0);
       const navigationNextTextButton = "Next Page";
       const navigationLastTextButton = "Previous Page";
@@ -17,7 +20,6 @@ describe("Given a list of Pokemons", () => {
     });
 
     test("And it should show a page counter with the current page number and the total number", () => {
-      const screen = document.createElement("div");
       const pageNumber = 0;
       const pageNumberText = "0/116";
       const pokemonList = new PokemonList(screen, pageNumber);
