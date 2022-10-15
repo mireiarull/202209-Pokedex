@@ -9,7 +9,9 @@ class PokemonList extends Component {
   render() {
     super.render();
     this.domElement.innerHTML = `
-    <button class= "button last-page">Previous Page</button><span>${this.pageOffset}/116</span><button class= "button next-page">Next Page</button>
+    <button class= "button last-page">Previous Page</button><span>${
+      this.pageOffset / 10
+    }/116</span><button class= "button next-page">Next Page</button>
     `;
   }
 
@@ -22,7 +24,7 @@ class PokemonList extends Component {
   addListener() {
     const nextPageButton = document.querySelector(".next-page");
     nextPageButton.addEventListener("click", async () => {
-      if (this.pageOffset < 116) {
+      if (this.pageOffset < 1153) {
         this.pageOffset += 10;
       } else {
         this.pageOffset = 116;
