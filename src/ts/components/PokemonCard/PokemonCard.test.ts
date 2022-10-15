@@ -2,15 +2,14 @@ import PokemonCard from "./PokemonCard";
 
 describe("Given a Pokemon Card", () => {
   describe("When it's rendered", () => {
-    test("Then it should show a pokemon card with the name, the image", () => {
+    test("Then it should show a pokemon card with the name 'Bulbasur'", () => {
       const screen = document.createElement("div");
       const name = "Bulbasur";
       const pokemon = {
         id: 1,
         name: "Bulbasur",
         sprites: {
-          // eslint-disable-next-line @typescript-eslint/naming-convention
-          front_default:
+          ["front_default"]:
             "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png",
         },
       };
