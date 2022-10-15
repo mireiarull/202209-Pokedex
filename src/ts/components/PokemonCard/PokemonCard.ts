@@ -1,4 +1,4 @@
-import type { PokemonData } from "../../types.js";
+import type { PokemonData } from "../../utils/types.js";
 import Component from "../Component/Component.js";
 
 class PokemonCard extends Component {
@@ -14,10 +14,8 @@ class PokemonCard extends Component {
       id,
       name,
       sprites: {
-        other: {
-          // eslint-disable-next-line @typescript-eslint/naming-convention
-          "official-artwork": { front_default },
-        },
+        // eslint-disable-next-line @typescript-eslint/naming-convention
+        front_default,
       },
     } = this.pokemon;
     super.render();

@@ -2,11 +2,7 @@ export interface PokemonData {
   id: number;
   name: string;
   sprites: {
-    other: {
-      "official-artwork": {
-        front_default: string;
-      };
-    };
+    front_default: string;
   };
 }
 

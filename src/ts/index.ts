@@ -1,6 +1,6 @@
 import PokemonCard from "./components/PokemonCard/PokemonCard.js";
-import fetchPokemon from "./fetchPokemon.js";
-import fetchPokemonList from "./fetchPokemonList.js";
+import fetchPokemon from "./utils/fetchPokemon.js";
+import fetchPokemonList from "./utils/fetchPokemonList.js";
 
 const newPokemon = await fetchPokemon("https://pokeapi.co/api/v2/pokemon/1/");
 
