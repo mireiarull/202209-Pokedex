@@ -4,7 +4,7 @@ class Component implements ComponentStructure {
   domElement: HTMLElement;
 
   constructor(
-    private readonly parentElement: HTMLElement,
+    public parentElement: HTMLElement,
     className: string,
     tag = "div"
   ) {

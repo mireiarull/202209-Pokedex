@@ -10,8 +10,10 @@ export interface PokemonDataList {
   count: number;
   next: string;
   previous: string | undefined;
-  results: {
-    name: string;
-    url: string;
-  };
+  results: [
+    {
+      name: string;
+      url: string;
+    }
+  ];
 }
