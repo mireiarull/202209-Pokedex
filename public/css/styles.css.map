@@ -1,1 +1,12 @@
-{"version":3,"sourceRoot":"","sources":["../../src/sass/reset/_reset.scss","../../src/sass/globals/_globals.scss","../../src/sass/styles.scss"],"names":[],"mappings":"AAAA;AAAA;AAAA;EAGE;;;AAGF;AAAA;EAEE;EACA;;;AAGF;EACE;EACA;;;AAGF;EACE;EACA;;;AAGF;AAAA;AAAA;AAAA;EAIE;;;AAGF;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;EAOE;EACA;;;AAGF;EACE;EACA;EACA;;;AC3CF;AAAA;EAEE;EACA;;;ACAF;EACE","file":"styles.css"}
+{
+  "version": 3,
+  "sourceRoot": "",
+  "sources": [
+    "../../src/sass/reset/_reset.scss",
+    "../../src/sass/globals/_globals.scss",
+    "../../src/sass/styles.scss"
+  ],
+  "names": [],
+  "mappings": "AAAA;AAAA;AAAA;EAGE;;;AAGF;AAAA;EAEE;EACA;;;AAGF;EACE;EACA;;;AAGF;EACE;EACA;;;AAGF;AAAA;AAAA;AAAA;EAIE;;;AAGF;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;EAOE;EACA;;;AAGF;EACE;EACA;EACA;;;AC3CF;AAAA;EAEE;EACA;;;ACAF;EACE",
+  "file": "styles.css"
+}
