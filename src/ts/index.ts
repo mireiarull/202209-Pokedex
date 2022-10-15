@@ -12,8 +12,7 @@ main.render();
 
 const mainSection = document.querySelector("main");
 
-const pageOffset = 0;
+const initialPageOffset = 0;
 
-const pokemonList = new PokemonList(mainSection, pageOffset);
-await pokemonList.printPokemonCards(pageOffset);
-// PokemonList.addListener();
+const pokemonList = new PokemonList(mainSection, initialPageOffset);
+await pokemonList.printPokemonCards(initialPageOffset);
