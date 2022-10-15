@@ -2,10 +2,12 @@ import PokemonCard from "../components/PokemonCard/PokemonCard.js";
 import fetchPokemon from "./fetchPokemon.js";
 import fetchPokemonList from "./fetchPokemonList.js";
 
-const printPokemonCard = async (parentElement: HTMLElement) => {
-  const pokemonList = await fetchPokemonList(0);
+const printPokemonCards = async (
+  parentElement: HTMLElement,
+  offset: number
+) => {
+  const pokemonList = await fetchPokemonList(offset);
   const pokemonUrlList = pokemonList.results;
-  console.log(pokemonUrlList);
 
   pokemonUrlList.forEach(async (pokemon) => {
     const individualPokemon = await fetchPokemon(pokemon.url);
@@ -14,4 +16,4 @@ const printPokemonCard = async (parentElement: HTMLElement) => {
   });
 };
 
-export default printPokemonCard;
+export default printPokemonCards;

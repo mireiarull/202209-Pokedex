@@ -1,12 +1,21 @@
-import PokemonCard from "./components/PokemonCard/PokemonCard.js";
-import PokemonListButton from "./components/PokemonListButton/PokemonListButton.js";
-import fetchPokemon from "./utils/fetchPokemon.js";
-import fetchPokemonList from "./utils/fetchPokemonList.js";
+import Component from "./components/Component/Component.js";
+import Header from "./components/Header/Header.js";
+import printPokemonCards from "./utils/printPokemonCards.js";
 
 const root = document.querySelector(".root");
 
-const pokemonListButton = new PokemonListButton(
-  root as HTMLElement,
-  "show Pokemons"
-);
-pokemonListButton.render();
+const pageOffset = 0;
+
+const header = new Header(root as HTMLElement);
+header.render();
+
+const main = new Component(root as HTMLElement, "main-container", "main");
+main.render();
+
+const mainSection = document.querySelector("main");
+
+const pokemonList = new Component(mainSection, "pokemon-list", "ol");
+pokemonList.render();
+
+const pokemonListContainer = document.querySelector("ol");
+await printPokemonCards(pokemonListContainer, pageOffset);
