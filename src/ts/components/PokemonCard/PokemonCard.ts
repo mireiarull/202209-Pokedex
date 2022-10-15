@@ -22,7 +22,7 @@ class PokemonCard extends Component {
     src="${image}"
     alt="${this.domElement.name}"
     class="pokemon-card__image"
-  />;
+  />
     <span>${id}</span>
       `;
   }
