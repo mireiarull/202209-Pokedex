@@ -1,10 +1,8 @@
 import Component from "./components/Component/Component.js";
 import Header from "./components/Header/Header.js";
-import printPokemonCards from "./utils/printPokemonCards.js";
+import PokemonList from "./components/PokemonList/PokemonList.js";
 
 const root = document.querySelector(".root");
-
-const pageOffset = 0;
 
 const header = new Header(root as HTMLElement);
 header.render();
@@ -14,8 +12,8 @@ main.render();
 
 const mainSection = document.querySelector("main");
 
-const pokemonList = new Component(mainSection, "pokemon-list", "ol");
-pokemonList.render();
+const pageOffset = 0;
 
-const pokemonListContainer = document.querySelector("ol");
-await printPokemonCards(pokemonListContainer, pageOffset);
+const pokemonList = new PokemonList(mainSection, pageOffset);
+await pokemonList.printPokemonCards(pageOffset);
+// PokemonList.addListener();
