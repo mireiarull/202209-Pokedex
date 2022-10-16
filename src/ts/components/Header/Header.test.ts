@@ -7,7 +7,7 @@ describe("Given a Header", () => {
       const title = "Pokémon";
       const description = "The complete Pokémon list";
 
-      const headerComponent = new Header(screen);
+      const headerComponent = new Header(screen, "", "");
       headerComponent.render();
 
       const pokemonHeaderTitle = screen.querySelector("h1");
