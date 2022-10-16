@@ -10,6 +10,7 @@ class Header extends Component {
     this.domElement.innerHTML = `
     <h1>Pokémon</h1>
     <span>The complete Pokémon list</span>
+    <a href="favoritePokemons.html">My favorite Pokémons</a>
     `;
   }
 }
