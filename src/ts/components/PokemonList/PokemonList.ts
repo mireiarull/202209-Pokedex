@@ -3,21 +3,26 @@ import Component from "../Component/Component.js";
 
 class PokemonList extends Component {
   constructor(parentElement: HTMLElement, private pageOffset: number) {
-    super(parentElement, "pokemon-list", "ol");
+    super(parentElement, "pokemon-list-container", "div");
   }
 
   render() {
     super.render();
     this.domElement.innerHTML = `
-    <button class= "button last-page">Previous Page</button><span>${
+    <nav class="pokemon-list__navigation">
+    <button class= "button last-page"><i class="fa-solid fa-backward"></i></button><span>${
       this.pageOffset / 10
-    }/116</span><button class= "button next-page">Next Page</button>
+    }/116</span><button class= "button next-page"><i class="fa-solid fa-forward"></i></button>
+    </nav>
+    <ol class="pokemon-list">
+    </ol>
     `;
   }
 
   async printPokemonCards(offset: number) {
     this.render();
-    await printPokemonCards(this.domElement, offset);
+    const pokemonListOl = this.domElement.querySelector("ol");
+    await printPokemonCards(pokemonListOl, offset);
     this.addListener();
   }
 
