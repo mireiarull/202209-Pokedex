@@ -12,12 +12,12 @@ class Header extends Component {
   render() {
     super.render();
     this.domElement.innerHTML = `
-    <div class="main-header__title">
-    <h1>Pokedex</h1>
-    <span>The complete Pokémon list</span>
-    </div>
-    <a class="main-header__button-desktop" href="${this.buttonLink}">${this.navigationButtonContent}</a>
-     <a class="main-header__button-mobile" href="${this.buttonLink}"><i class="fa-solid fa-heart"></i></a>
+      <div class="main-header__title">
+      <h1>Pokedex</h1>
+      <span>The complete Pokémon list</span>
+      </div>
+      <a class="main-header__button-desktop" href="${this.buttonLink}">${this.navigationButtonContent}</a>
+      <a class="main-header__button-mobile" href="${this.buttonLink}"><i class="fa-solid fa-heart"></i></a>
     `;
   }
 }

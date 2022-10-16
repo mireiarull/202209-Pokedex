@@ -13,11 +13,12 @@ const printPokemonCards = async (
     fetchPokemon(pokemon.url)
   );
   const pokemonResults = await Promise.all(pokemonPromises);
-
   pokemonResults.forEach((pokemon) => {
     const pokemonCard = new PokemonCard(parentElement, pokemon);
     pokemonCard.render();
   });
+
+  return pokemonResults;
 };
 
 export default printPokemonCards;

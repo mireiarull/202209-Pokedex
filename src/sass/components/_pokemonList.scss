@@ -23,6 +23,10 @@
       max-width: 70vw;
     }
   }
+
+  .button--delete {
+    display: none;
+  }
 }
 
 .fav-pokemon-list-container {
@@ -36,7 +40,7 @@
   flex-flow: row wrap;
   justify-content: center;
 
-  i {
+  .fa-regular {
     display: none;
   }
 }
