@@ -2,6 +2,7 @@
 @use "./globals/globals";
 @use "./components/header";
 @use "./components/pokemonList";
+@use "./components/pokemonCard";
 
 main {
   background-color: white;

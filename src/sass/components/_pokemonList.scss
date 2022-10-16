@@ -5,7 +5,7 @@
   margin-top: 3rem;
 
   .pokemon-list__navigation {
-    font-size: 1.5rem;
+    font-size: 1rem;
     button {
       background-color: white;
       border: none;
@@ -16,7 +16,7 @@
 
   .pokemon-list {
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: row wrap;
     @media only screen and (min-width: 650px) {
       flex-flow: row wrap;
     }

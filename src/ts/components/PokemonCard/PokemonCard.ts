@@ -24,8 +24,10 @@ class PokemonCard extends Component {
     alt="${name}"
     class="pokemon-card__image"
   />
-    <span>${id}</span>
+    <div>
+    <span>id: ${id}</span>
     <button><i class="fa-regular fa-heart"></i></button>
+    </div>
       `;
     this.addListeners();
   }
