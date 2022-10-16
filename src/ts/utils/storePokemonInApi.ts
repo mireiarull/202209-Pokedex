@@ -1,7 +1,7 @@
 import type { PokemonData } from "./types.js";
 
 const storePokemonInApi = async (pokemon: PokemonData): Promise<void> => {
-  await fetch("http://localhost:4000/pokemon/", {
+  await fetch("https://rocky-refuge-79563.herokuapp.com/pokemon/", {
     method: "POST",
     body: JSON.stringify({
       name: pokemon.name,

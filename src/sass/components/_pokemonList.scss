@@ -9,7 +9,7 @@
     button {
       background-color: white;
       border: none;
-
+      cursor: pointer;
       padding: 0.5rem;
     }
   }
@@ -42,5 +42,6 @@
 
   .fa-regular {
     display: none;
+    cursor: pointer;
   }
 }
