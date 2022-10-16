@@ -6,6 +6,7 @@
   width: 150px;
   align-items: center;
   border-radius: 1rem;
+  padding: 5px;
 
   h2 {
     font-size: 1rem;
@@ -25,8 +26,10 @@
     background-color: #49d0b0;
     border: none;
     font-size: 1.1rem;
+    cursor: pointer;
   }
-  // @media only screen and (min-width: 650px) {
-  //   width: 300px;
-  // }
+}
+
+.selected {
+  color: red;
 }
