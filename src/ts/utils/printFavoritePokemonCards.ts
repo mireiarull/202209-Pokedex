@@ -1,6 +1,5 @@
 import PokemonCard from "../components/PokemonCard/PokemonCard.js";
 import fetchFavoritePokemonList from "./fetchFavoritePokemonList.js";
-import fetchPokemon from "./fetchPokemon.js";
 
 const printFavoritePokemonCards = async (parentElement: HTMLElement) => {
   const favoritepokemonList = await fetchFavoritePokemonList();
