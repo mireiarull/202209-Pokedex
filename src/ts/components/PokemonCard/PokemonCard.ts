@@ -7,7 +7,7 @@ class PokemonCard extends Component {
     parentElement: HTMLElement,
     private readonly pokemon: PokemonData
   ) {
-    super(parentElement, "pokemon-card", "li");
+    super(parentElement, `pokemon-card `, "li");
   }
 
   render() {
@@ -21,11 +21,11 @@ class PokemonCard extends Component {
     <h2>${name}</h2>
   <img
     src="${image}"
-    alt="${this.domElement.name}"
+    alt="${name}"
     class="pokemon-card__image"
   />
     <span>${id}</span>
-    <button><i class="fa-regular fa-star"></i></button>
+    <button><i class="fa-regular fa-heart"></i></button>
       `;
     this.addListeners();
   }

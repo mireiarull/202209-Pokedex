@@ -1,0 +1,47 @@
+.main-header {
+  display: flex;
+  justify-content: space-around;
+
+  .main-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  h1 {
+    font-weight: bold;
+  }
+
+  a {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+
+    font-size: 0.75rem;
+    @media only screen and (min-width: 650px) {
+      right: 20px;
+      top: 30px;
+      display: flex;
+      position: absolute;
+      font-size: 1rem;
+    }
+  }
+
+  .main-header__button-mobile {
+    display: flex;
+    font-size: 2rem;
+  }
+  .main-header__button-desktop {
+    display: none;
+  }
+
+  @media only screen and (min-width: 650px) {
+    display: flex;
+    .main-header__button-desktop {
+      display: flex;
+    }
+    .main-header__button-mobile {
+      display: none;
+    }
+  }
+}

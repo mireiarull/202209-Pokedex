@@ -1,5 +1,6 @@
 @use "./reset/reset";
 @use "./globals/globals";
+@use "./components/header";
 
 main {
   background-color: rgb(233, 233, 196);
