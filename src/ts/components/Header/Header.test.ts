@@ -4,10 +4,10 @@ describe("Given a Header", () => {
   describe("When it's rendered", () => {
     test("Then it should show the web title as a h1 and a description as a span", () => {
       const screen = document.createElement("div");
-      const title = "Pokémon";
+      const title = "Pokedex";
       const description = "The complete Pokémon list";
 
-      const headerComponent = new Header(screen);
+      const headerComponent = new Header(screen, "", "");
       headerComponent.render();
 
       const pokemonHeaderTitle = screen.querySelector("h1");

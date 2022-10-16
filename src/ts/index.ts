@@ -4,7 +4,11 @@ import PokemonList from "./components/PokemonList/PokemonList.js";
 
 const root = document.querySelector(".root");
 
-const header = new Header(root as HTMLElement);
+const header = new Header(
+  root as HTMLElement,
+  "My favorite Pokémons",
+  "favoritePokemons.html"
+);
 header.render();
 
 const main = new Component(root as HTMLElement, "main-container", "main");

@@ -12,6 +12,13 @@ describe("Given a Pokemon Card", () => {
           ["front_default"]:
             "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png",
         },
+        types: [
+          {
+            type: {
+              typeName: "grass",
+            },
+          },
+        ],
       };
 
       const pokemonCardComponent = new PokemonCard(screen, pokemon);
