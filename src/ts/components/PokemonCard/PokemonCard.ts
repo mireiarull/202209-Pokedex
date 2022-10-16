@@ -1,3 +1,4 @@
+import deletePokemonFromApi from "../../utils/deletePokemonFromApi.js";
 import storePokemonInApi from "../../utils/storePokemonInApi.js";
 import type { PokemonData } from "../../utils/types.js";
 import Component from "../Component/Component.js";
@@ -26,7 +27,8 @@ class PokemonCard extends Component {
   />
     <div>
     <span>id: ${id}</span>
-    <button><i class="fa-regular fa-heart"></i></button>
+    <button "button--fav"><i class="fa-regular fa-heart"></i></button>
+    <button class ="button--delete"><i class="fa-solid fa-xmark"></i></button>
     </div>
       `;
     this.addListeners();
@@ -40,6 +42,12 @@ class PokemonCard extends Component {
       const icon = this.domElement.querySelector("i");
       icon.classList.remove("fa-regular");
       icon.classList.add("fa-solid");
+    });
+
+    const deleteButton = this.domElement.querySelector(".button--delete");
+    deleteButton.addEventListener("click", async () => {
+      await deletePokemonFromApi(this.pokemon);
+      location.reload();
     });
   }
 }
