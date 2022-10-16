@@ -7,7 +7,7 @@
     "build-js": "tsc",
     "build-js:dev": "npm run build-js -- -w",
     "build-css": "sass src/sass/styles.scss public/css/styles.css",
-    "build-css:dev": "npm run build-css --watch",
+    "build-css:dev": "npm run build-css -- --watch",
     "build-js:build-css": "npm run build-js && npm run build-css",
     "test": "jest",
     "test:dev": "npm test -- --watchAll"
