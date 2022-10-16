@@ -38,11 +38,11 @@ class PokemonCard extends Component {
   addListeners() {
     const favoriteButton = this.domElement.querySelector("button");
     favoriteButton.addEventListener("click", async () => {
-      await storePokemonInApi(this.pokemon);
-      favoriteButton.disabled = true;
       const icon = this.domElement.querySelector("i");
       icon.classList.remove("fa-regular");
       icon.classList.add("fa-solid");
+      await storePokemonInApi(this.pokemon);
+      favoriteButton.disabled = true;
     });
 
     const deleteButton = this.domElement.querySelector(".button--delete");
