@@ -24,8 +24,10 @@ class PokemonCard extends Component {
     alt="${name}"
     class="pokemon-card__image"
   />
-    <span>${id}</span>
+    <div>
+    <span>id: ${id}</span>
     <button><i class="fa-regular fa-heart"></i></button>
+    </div>
       `;
     this.addListeners();
   }
@@ -35,6 +37,9 @@ class PokemonCard extends Component {
     favoriteButton.addEventListener("click", async () => {
       await storePokemonInApi(this.pokemon);
       favoriteButton.disabled = true;
+      const icon = this.domElement.querySelector("i");
+      icon.classList.remove("fa-regular");
+      icon.classList.add("fa-solid");
     });
   }
 }

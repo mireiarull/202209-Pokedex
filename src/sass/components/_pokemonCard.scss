@@ -1,0 +1,35 @@
+.pokemon-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #49d0b0;
+  margin: 1rem;
+  width: 150px;
+  align-items: center;
+  border-radius: 1rem;
+  padding: 5px;
+
+  h2 {
+    font-size: 1rem;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+
+  div {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    font-size: 0.7rem;
+    align-items: center;
+  }
+
+  button {
+    background-color: #49d0b0;
+    border: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+  }
+}
+
+.selected {
+  color: red;
+}

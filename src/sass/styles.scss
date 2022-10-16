@@ -1,7 +1,9 @@
 @use "./reset/reset";
 @use "./globals/globals";
 @use "./components/header";
+@use "./components/pokemonList";
+@use "./components/pokemonCard";
 
 main {
-  background-color: rgb(233, 233, 196);
+  background-color: white;
 }

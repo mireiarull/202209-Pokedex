@@ -1,0 +1,42 @@
+.pokemon-list-container {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  margin-top: 3rem;
+
+  .pokemon-list__navigation {
+    font-size: 1rem;
+    button {
+      background-color: white;
+      border: none;
+
+      padding: 0.5rem;
+    }
+  }
+
+  .pokemon-list {
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    @media only screen and (min-width: 650px) {
+      flex-flow: row wrap;
+      max-width: 70vw;
+    }
+  }
+}
+
+.fav-pokemon-list-container {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.fav-pokemon-list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+
+  i {
+    display: none;
+  }
+}

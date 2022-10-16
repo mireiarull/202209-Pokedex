@@ -3,21 +3,26 @@ import Component from "../Component/Component.js";
 
 class PokemonList extends Component {
   constructor(parentElement: HTMLElement, private pageOffset: number) {
-    super(parentElement, "pokemon-list", "ol");
+    super(parentElement, "pokemon-list-container", "div");
   }
 
   render() {
     super.render();
     this.domElement.innerHTML = `
-    <button class= "button last-page">Previous Page</button><span>${
-      this.pageOffset / 10
-    }/116</span><button class= "button next-page">Next Page</button>
+    <nav class="pokemon-list__navigation">
+    <button class= "button last-page"><i class="fa-solid fa-backward"></i></button><span>${
+      this.pageOffset / 20 + 1
+    }/58</span><button class= "button next-page"><i class="fa-solid fa-forward"></i></button>
+    </nav>
+    <ol class="pokemon-list">
+    </ol>
     `;
   }
 
   async printPokemonCards(offset: number) {
     this.render();
-    await printPokemonCards(this.domElement, offset);
+    const pokemonListOl = this.domElement.querySelector("ol");
+    await printPokemonCards(pokemonListOl, offset);
     this.addListener();
   }
 
@@ -25,7 +30,7 @@ class PokemonList extends Component {
     const nextPageButton = document.querySelector(".next-page");
     nextPageButton.addEventListener("click", async () => {
       if (this.pageOffset < 1153) {
-        this.pageOffset += 10;
+        this.pageOffset += 20;
       } else {
         this.pageOffset = 116;
       }
@@ -36,7 +41,7 @@ class PokemonList extends Component {
     const previousPageButton = document.querySelector(".last-page");
     previousPageButton.addEventListener("click", async () => {
       if (this.pageOffset > 0) {
-        this.pageOffset -= 10;
+        this.pageOffset -= 20;
       } else {
         this.pageOffset = 0;
       }
