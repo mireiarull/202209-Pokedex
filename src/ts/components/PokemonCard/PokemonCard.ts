@@ -1,3 +1,4 @@
+import storePokemonInApi from "../../utils/storePokemonInApi.js";
 import type { PokemonData } from "../../utils/types.js";
 import Component from "../Component/Component.js";
 
@@ -24,7 +25,17 @@ class PokemonCard extends Component {
     class="pokemon-card__image"
   />
     <span>${id}</span>
+    <button><i class="fa-regular fa-star"></i></button>
       `;
+    this.addListeners();
+  }
+
+  addListeners() {
+    const favoriteButton = this.domElement.querySelector("button");
+    favoriteButton.addEventListener("click", async () => {
+      await storePokemonInApi(this.pokemon);
+      favoriteButton.disabled = true;
+    });
   }
 }
 

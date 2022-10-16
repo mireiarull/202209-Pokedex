@@ -9,9 +9,13 @@ const printPokemonCards = async (
   const pokemonList = await fetchPokemonList(offset);
   const pokemonUrlList = pokemonList.results;
 
-  pokemonUrlList.forEach(async (pokemon) => {
-    const individualPokemon = await fetchPokemon(pokemon.url);
-    const pokemonCard = new PokemonCard(parentElement, individualPokemon);
+  const pokemonPromises = pokemonUrlList.map(async (pokemon) =>
+    fetchPokemon(pokemon.url)
+  );
+  const pokemonResults = await Promise.all(pokemonPromises);
+
+  pokemonResults.forEach((pokemon) => {
+    const pokemonCard = new PokemonCard(parentElement, pokemon);
     pokemonCard.render();
   });
 };
