@@ -40,3 +40,4 @@ const favoritePokemonList = new Component(
 favoritePokemonList.render();
 const pokemonList = document.querySelector("ol");
 await printFavoritePokemonCards(pokemonList);
+
